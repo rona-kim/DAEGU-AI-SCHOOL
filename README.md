@@ -1,2 +1,2 @@
 # Hi, there ! This is RONA ! 🙋‍♀️
-__This is the space for my development study__💻
+_This is the space for my development study_ 💻
