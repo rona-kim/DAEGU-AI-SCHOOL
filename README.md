@@ -1,1 +1,2 @@
-# This is RONA
+# Hi, there !
+# This is RONA !
