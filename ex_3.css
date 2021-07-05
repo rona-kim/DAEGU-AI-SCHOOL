@@ -1,0 +1,284 @@
+/*
+h1	{ 
+	font-size: 80px;
+ }
+*/
+/*
+header{
+	color:red;
+}
+
+header h1,
+footer h1 {
+
+	color: blue;
+}
+
+header p,
+footer p{
+
+	color: green;
+}
+*/
+/*
+footer h1{
+
+	color: blue;
+
+}
+footer p{
+	color: green;
+}
+*/
+
+/*
+h1 {
+	color: red;	
+}
+
+#test1 {color: blue;}
+
+.test2 {color: green;}
+
+
+input[type="text"] {
+	border: solid 10px red;
+}
+
+input[type="password"]{
+border: solid 10px blue;
+}
+*/
+/*
+
+.bg-1 {
+	background-color: red;
+}
+
+.font-size-1{
+	font-size: 50px;
+}
+
+#color-1 {
+	color: red;
+}
+#font-style-1 {
+	font-style: italic;
+}
+
+*/
+
+
+/*
+#intro h2 {
+	color: red;
+}
+
+#intro .container p {
+	color: blue;
+}
+
+
+#color-2 {
+	color: pink;
+}
+
+.color-1 {
+	color: green;
+}
+
+h1 {
+	color: red;
+}
+
+
+h1 { 
+color: blue; 
+}
+
+
+
+#intro .container h1 {
+	color: pink;
+}
+#intro div h1 {
+
+	color: green;
+}
+#intro h1 {
+	color: blue;
+}
+
+
+header h1 {
+	color: red;
+}
+
+*/
+/*
+div{
+	width: 100%;
+	height: 300px;
+
+	min-width: 600px ;
+	max-width: 800px;
+
+	border: solid 10px red;
+	border-radius: 50px;
+
+	background-color: yellow;
+
+	opacity: 1;
+
+}
+
+
+
+h1	{ 
+	color: hotpink; 
+	font-size: 80px;
+	font-style: initial;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 100;
+	text-decoration: line-through;
+	text-align: right;
+
+	background-color: pink;
+}
+
+ul {
+	list-style: none;
+}
+
+
+
+
+*/
+
+
+
+/*
+#bg {
+	width: 900px;
+	height: 900px;
+	background-color: yellow;
+	background-image: url(icon.png);
+	background-repeat:no-repeat;
+	background-position: top left;
+}
+*/
+
+
+
+
+/*방문한 적 없는 링크에 대해서
+디자인을 적용할 때 */
+/*
+a:link{
+	color: red;
+}
+*/
+/* 클릭할 때 색상변경*/
+/*
+a:active {
+	color: blue;
+}
+*
+/*커서를 갖다댔을 때*/
+/*
+a:hover{
+	color: pink;
+}
+*/
+/*input을 클릭했을 때 , 포커스를 지우면 없어짐*/
+/*
+input:focus{
+	border: solid 10px red;
+}
+*/
+/*li를 선택해서 디자인을 적용할 때
+first,last, nth(n), 2n 짝수만, 2n +1홀수*/
+/*
+li:first-child{
+	color: red;
+}
+
+li:last-child{
+	color: blue;
+}
+
+li:nth-child(2n + 1){
+	color: gray;
+}
+
+
+
+
+li:before {
+	content: "*-*";
+}
+
+
+li:after {
+	content: "#-#";
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
