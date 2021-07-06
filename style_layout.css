@@ -1,0 +1,180 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+/*초기작업*/
+
+.menu ul {
+	overflow: hidden; /*li가 3차원이기 때문에 ul에 높이 영향을 주지 않으므로 overflow사용*/
+	background: gray;
+}
+
+.menu li{
+	/*display: inline-block;  x축 정렬하면서 크기 유지, 공백이 생겨서 안됨*/
+	float: left;
+
+	width: 100px;
+	height: 50px;
+	background: yellowgreen;
+	border-top: solid 1px red ;
+	border-bottom: solid 1px red;
+	border-left: solid 1px red;
+
+
+	/*border: solid 1px red;*/
+
+	/*text-align: center;*/
+	/*line-height: 50px; height값이 있으면 line-height와 동일한 값을 준다,y축 중앙정렬*/
+
+	/*padding-top: 15px;*/
+	/*padding-bottom: 15px; height값이 없을 때 padding top, bottom 속성값을 주어서 y축 중앙정렬*/
+}
+
+.menu li:last-child {
+	border-right: solid 1px red;
+}
+
+
+/*a태그 안에 문서를 링크 걸어도됨*/
+
+/*여백을 눌러도 커서가 클릭할 수 있는 커서로 변경할 수 있게 하는
+block로 주고 이 태그 안에 padding값, align : a태그 안에서 정렬 */
+
+.menu li a {
+	display: block;
+	text-align: center;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.menu li a:hover {
+	color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+.kakao-lists li {
+	margin-bottom: 20px;
+}
+
+
+.kakao-lists li a {
+	display: block;
+	padding-left: 25px;
+}
+
+
+/*img - inline block 성질, info는 inline-block으로 변경을 해주었다
+ 버티컬 사용해서 x축 중앙정렬 사용 가능했음*/
+.kakao-lists li img,
+.kakao-lists li .kakao-info {
+	vertical-align: middle;
+}
+
+.kakao-lists li img {
+	border-radius: 20px;
+	margin-right: 10px;
+}
+
+.kakao-lists li .kakao-info {
+	display: inline-block;
+}
+
+.kakao-lists li .kakao-info h3 {
+	font-size: 18px;
+	margin: 0;
+
+}
+
+.kakao-lists li .kakao-info h3 span {
+	font-size: 14px;
+	color: #c8c8c8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.living-lists {
+	width: 750px;
+	background: orange;
+}
+
+.living-lists .image-link,
+.living-lists .info-link {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.living-lists .image-link {
+	margin-right: 21px;
+}
+
+.living-lists .info-link {
+	width: 512px;
+}
+
+
+
+
+
+.title-wrap {
+	border-top: solid 2px #000000;
+	border-bottom: solid 1px #000000;
+	
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 20px;
+}
+
+.title-wrap h3 {
+	margin-bottom: 20px;
+}
+
+.title-wrap .btn-wrap {
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+/*웹사이트 레이아웃 작업에 영향을 미치는 다양한 css
+https://flexbox.help/
+css 레이아웃을 배웁시다*/
+
+
+
+
