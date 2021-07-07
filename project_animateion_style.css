@@ -1,0 +1,265 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.mouse-animation li {
+	width: 250px;
+	background-color: rgba(0, 0, 0, 1);
+	padding: 20px;
+
+	border-top: solid 5px #dfdfdf;
+
+	transition: opacity 0.5s, margin-left 0.5s;
+}
+
+	.mouse-animation li:hover{
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-left: 10px;
+}
+ /*opacity를 적용하면 글자까지 포함해서 모든 영역이 투명도 조절이 되는데
+ 글자까지 투명도 조절 되는게 싫으면 
+ background-color : rgba (색상)으로 변경하고 ,(0,0,0,1) 앞의 0,0,0은 색상, 1은 투명도인데
+ 애니메이션에서 투명도를 조절해주면 된다 */
+ /*http://hex2rgba.devoth.com/*/
+
+.mouse-animation li a {
+	color: blueviolet;
+	font-size: 20px;
+}
+
+
+.move-box {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+
+	animation-name: movebox;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running; running : 브라우저 접속할 때 동작 시키겠다, paused 동작 없음
+	animation-fill-mode: backwards; /*0%에 입력된 값으로 사용자에게 최초로 보여주겠다.red로 설정했지만 0%에는 green으로 해놨음 green으로 보여짐 */
+}
+
+@keyframes movebox {
+	0%{	
+		background-color: green;  /*자연스러움을 위해 0%지점을 박스 만들었을 때 색상을 동일하게 함 */
+		left: 0;
+		top: 0;
+	}
+	25%{
+		background-color: yellow;
+		left: 500px;
+		top: 0;
+	}
+	50%{
+		background-color: gray;
+		left: 500px;
+		top: 500px;
+		border-radius: 50%;
+	}
+	75%{
+		background-color: blue;
+		left: 0;
+		top: 500px;
+	}
+	100%{
+		background-color: red;
+		left: 0;
+		top: 0;
+	}
+
+
+}
+
+
+
+.outer-border {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	width: 200px;
+	height: 200px;
+	border: solid 15px red;
+	border-radius: 50%;
+
+	margin: 0 auto;
+	margin-top: 200px;
+
+	animation: outerborder 2s infinite;
+}
+
+@keyframes outerborder {
+	0% {border-color: red; transform: scale(1);}
+	25% {border-color: yellow; transform: scale(1.2);}
+	50% {border-color: blue; transform: scale(1.3);}
+	75% {border-color: green; transform: scale(1.2);}
+	100% {border-color: pink; transform: scale(1);}
+
+}
+
+/*scale은 자식에게 영향을 */
+.inner-border {
+	box-sizing: border-box; /*박스 안쪽으로 보더가 형성*/
+	width: 75px;
+	height: 75px;
+	border: 5px solid purple;
+
+	animation: innerborder 2s infinite alternate;
+
+}
+
+@keyframes innerborder {
+	0% {transform: rotate(0deg);}
+	25%{ border-color: blue; border-width: 10px; }
+	50%{ border-color: yellow; border-width: 20px;}
+	75%{ border-color: green; border-width: 40px;}
+	100%{ border-color: gray; border-width: 5px; transform: rotate(360deg);}
+}
+
+
+
+
+.mario-container {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	border: solid 10px black;
+
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.mario-container .mario-coin {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	background-color: gold;
+	border-radius: 50%;
+
+	margin: 0 auto;
+	margin-top: 100px;
+
+	animation: jumpcoin 0.8s linear infinite ;
+}
+
+@keyframes jumpcoin {
+	0%{
+		transform: translateY(0px) ;
+		opacity: 1;
+	}
+	50%{
+		transform: translateY(-100px) rotateY(180deg);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(-100px) rotateY(360deg);
+		opacity: 0;
+	}
+}
+
+.mario-container .mario-box {
+	width: 100px;
+	height: 100px;
+	background-color: saddlebrown;
+
+	margin: 0 auto;
+
+	animation: jumpbox 0.5s linear infinite alternate;
+}
+
+@keyframes jumpbox {
+	0%{transform: translateY(0px);}
+	50%{transform: translateY(-10px);}
+	100%{transform: translateY(0px);}
+}
+
+
+
+
+
+
+/*부모가 3차원적이면 자식을 3차원으로 적용했을 때 wid값을 부모 기준으로 설정 가능함
+left,bottom 사용하게되면 부모를 기준으로 형성!!!, hoverimage를 기준으로 형성*/
+
+.hover-image {
+	cursor: pointer;
+
+	overflow: hidden; /*image를 벗어나는 것들은 감추겠다*/
+
+	position: relative;
+	width: 400px;
+	border: solid 10px #000000;
+}
+/*width값을 부모 사이즈에 맞게 됨, img는 태생적으로 하단에 공백이 있는데 없애주려면 align*/
+.hover-image img {
+
+	width: 100%;
+	vertical-align: middle;
+}
+
+.hover-image:hover img {
+	transform: scale(1.3);
+	transition: transform 0.3s linear;
+}
+
+.hover-image .image-info{
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px;
+
+	left: 0;
+	bottom: -85px;
+
+	transition: bottom 0.3s linear ;
+
+}
+
+.hover-image:hover .image-info {
+	bottom: 0;
+}
+
+
+
+
+.hover-image .image-info h2,
+.hover-image .image-info p {
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+
+.hover-image .image-info h2{
+	font-size: 20px;
+}
+.hover-image .image-info p{
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
