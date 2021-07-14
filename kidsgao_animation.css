@@ -101,6 +101,100 @@
 }
 
 
+/*forest1*/
+
+#forest1 .treeWrap .rabbit1 {
+	animation: spinRabbit1 1000ms linear infinite alternate;
+}
+
+@keyframes spinRabbit1 {
+	from{ transform: rotate(0deg); }
+	to { transform: rotate(10deg); }
+}
+
+#forest1 .treeWrap .rabbit2 {
+	animation: spinRabbit2 1000ms linear infinite alternate ;
+}
+
+@keyframes spinRabbit2 {
+	from {transform: rotate(10deg);}
+	to { transform: rotate(0deg); }
+}
+
+
+/*forest2*/
+
+#forest2 .machineWrap2 .machineLeft {
+	animation: moveLeft 1s linear infinite alternate;
+}
+ @keyframes moveLeft {
+ 	from{left: 30px;}
+ 	to{left: 0;}
+ }
+
+
+#forest2 .machineWrap2 .machineRight {
+	animation: moveRight 1s linear infinite alternate;
+}
+ @keyframes moveRight {
+ 	from{left: -30px;}
+ 	to{left: 0;}
+ 	/*최초위치로 돌아가게끔*/
+}
+
+/*forest3*/
+
+#forest3 .forest3Wrap .smallBird {
+	animation: spinSmallBird 1000ms linear infinite alternate;
+}
+@keyframes spinSmallBird {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(10deg);}
+}
+
+#forest3 .forest3Wrap .bigBird {
+	animation: spinBigBird 1000ms linear infinite alternate;
+}
+@keyframes spinBigBird {
+	from {transform: rotate(-10deg);}
+	to {transform: rotate(0deg);}
+}
+
+
+/*science*/
+
+#science .scienceWrap .gly {
+	animation: spinGly 1500ms infinite alternate linear;
+}
+@keyframes spinGly {
+	from{transform: rotate(0deg);}
+	to{transform: rotate(50deg);}
+
+}
+
+#science .scienceWrap .scienceRightWrap .water {
+	animation: spinWater 1500ms infinite alternate linear;
+}
+@keyframes spinWater {
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-50deg);}
+	
+}
+
+
+/*night1*/
+
+
+#night1 .starWrap .star1,
+#night1 .starWrap .star2,
+#night1 .starWrap .star3 {
+	animation: pulseStar 1s linear infinite alternate ;
+}
+
+@keyframes pulseStar {
+	from { transform: scale(1); }
+	to { transform: scale(0.8); }
+}
 
 
 
