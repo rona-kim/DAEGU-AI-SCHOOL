@@ -196,6 +196,84 @@
 	to { transform: scale(0.8); }
 }
 
+/*night2*/
+
+#night2 .moon {
+	animation: moveMoon linear 10s infinite;
+}
+/*dragonfly때는 position이 relative여서 left가능했지만
+moon은 position이 static이기 때문에 margin으로 효과
+moon의 원래 위치에서 -135px당겨서 시작하고
+화면 밖으로 10%더 나가서 마무리*/
+@keyframes moveMoon {
+	from{
+		margin-left: -135px;
+	}
+	to {
+		margin-left: 110%;
+	}
+}
+
+
+/*morning*/
+
+#morning .sun {
+	animation: moveSun linear 10s 1500ms infinite;
+}
+/*delay 1500ms 먼저 나오는 숫자duration*/
+@keyframes moveSun {
+	from{
+		margin-left: -131px;
+	}
+	to {
+		margin-left: 110%;
+	}
+}
+
+/*https://jeremyckahn.github.io/stylie/
+easeOutSine*/
+
+#kitchen .steamWrap .bubble1 {
+  animation-name: bubble;
+  animation-duration: 1000ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: 0 0;
+}
+@keyframes bubble {
+  0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+  100% {transform:translate(-99px, -198px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
