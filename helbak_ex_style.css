@@ -1,0 +1,402 @@
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+/*모든html태그
+패딩으로 인해 공간에 대한 크기가 달라지는걸 방지하기 위해 박스사이징
+*/
+/*default값으로 넣어준다*/
+html, body {
+	width: 100%;
+	height: 100%;
+}
+/* *을 이용해서 없어진 것 같지만 실제로는 숨어있는 거라 none처리 해줘야함 */
+
+li {
+	list-style: none;
+	/*font-size: 0;*/
+	
+}
+
+body {
+	overflow-x: hidden;
+
+	font-family: sans-serif;
+	color: #585858;
+}
+/*font weight 폰트 굵기, 100~900까지 있음,100씩 커짐*/
+h1, h2, h3, h4, h5, h6, p{
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+}
+/*img하단 미세한 공백 제거*/
+
+img {
+	vertical-align: middle;
+}
+
+/*span은 inline요소 이지만 이 사이트에서는 block으로 활용하겠다*/
+span {
+	display: block;
+}
+
+
+/*미디어쿼리 밖을 모바일버전으로 만들고 미디어쿼리 안을 pc버전으로 만듬*/
+
+#header h1 {
+	background-color: yellowgreen;
+}
+/*a태그는 inline요소*/
+#header h1 .logo {
+	position: relative;
+
+	display: block;
+
+	width: 100%;
+	height: 65px;
+	/*background-color: yellow;*/
+}
+
+
+#header .logo img {
+	position: absolute;
+
+	top: 0;
+	margin-top: 23px;
+
+	left: 50%;
+	margin-left: -93px;
+
+}
+/*hidded값을 사용하면 부모 태그에도 자식의 높이값이 영향이 감!!!*/
+#header .buttons ul {
+	overflow: hidden;
+}
+/*float를 사용했기 때문에 일부 3차원이라서 부모 태그에 높이값 영향을 안줌 (ul)
+자식이 float을 사용했을 때 부모가 overflow hidden값을 가지고 있으 자식의 높이값을 부모가 인식 가능 
+ul,nav 각 65씩, 그렇게 되면 header의 높이값은 결국 130이됨 */
+#header .buttons ul li {
+	position: relative;
+
+	float: left;
+
+	width: 33.3333%;
+	height: 65px;
+
+}
+
+/*a태그는 inline요소, 모든 부분을 클릭 가능하게 하려면(a태그를 공간에 꽉 채우려면) block으로 변경
+img는 inline-block요소, text-align은 inline, inline-block에만 사용 가능*/
+#header .buttons .menu_button {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	text-align:center;
+
+}
+
+#header .buttons li:nth-child(1) .menu_button {
+	background-color: blue;
+}
+
+#header .buttons li:nth-child(2) .menu_button {
+	background-color: pink;
+}
+
+#header .buttons li:nth-child(3) .menu_button {
+	background-color: coral;
+}
+
+/*y축 중앙정렬, 실무팁*/
+#header .buttons li .menu_button img {
+	position: relative;
+	height: 20px;
+
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: -10px;
+	
+}
+
+
+/*main*/
+
+
+.main_content .product_group_link {
+		position: relative;
+
+		display: block;
+		/*원래 이미지의 크기와 근사치로 */
+		width: 100%;
+		height: 56.25%;
+		border: solid 10px red;
+
+
+		overflow: hidden;
+
+		/*float: left;*/
+	}
+
+	.main_content .product_group_link img {
+		width: 100%;
+		height: 100%;
+	}
+	/*먼저 나오는게 3차원이면 뒤쪽으로 레이어가 들어감*/
+	.main_content .product_group .link_text {
+		position: absolute;
+
+		left: 25px;
+		bottom: 25px;
+
+		color: black;
+		font-size: 25px;
+	}
+
+
+/*footer*/
+
+	#footer {
+		position: relative;
+		background-color: yellowgreen;
+/*to top button을 만들기 위해 패딩값을 준거임*/
+		padding-bottom: 66px;
+	}
+	#footer .left_nav {
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	#footer .left_nav li {
+		padding: 5px 0;
+	}
+
+	#footer .right_methods {
+		text-align: center;
+
+		margin-bottom: 20px;
+		margin-top: 30px;
+	}
+
+	#footer .right_methods li {
+		display: inline-block;
+		padding: 7px 4px;
+	}
+
+	#footer .right_methods .payment_icon {
+		display: inline-block;
+
+		width: 30px;
+		height: 20px;
+	}
+	/*클래스를 연달아 기입하면(띄어쓰기없이) 여러개의 아이콘 중에서 원이라고 하는 클래스를 가지고 
+	있는 페이먼트 아이콘을 선택해라 라는 뜻*/
+	#footer .right_methods .payment_icon.one {
+		background-color: black;
+	}
+	#footer .right_methods .payment_icon.two {
+		background-color: red;
+	}
+	#footer .right_methods .payment_icon.three {
+		zbackground-color: gray;
+	}
+	#footer .right_methods .payment_icon.four {
+		background-color: pink;
+	}
+	#footer .right_methods .payment_icon.five {
+		background-color: orange;
+	}
+
+	#footer .to_top_button {
+		position: absolute;
+		display: block;
+
+		width: 66px;
+		height: 66px;
+		background-color: yellow;
+
+		bottom: 0;
+		left: 50%;
+		margin-left: -33px;
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+/*1em = 16px*/
+@media (min-width: 47em) {
+	#header {
+		position: fixed;
+		width: 100%;
+		height: 80px;
+
+		top: 0;
+		left: 0;
+
+		z-index: 99999;
+	}
+
+	#header h1 {
+		width: 50%;
+	}
+
+	#header h1 .logo {
+		width: 280px;
+		height: 80px;
+	}
+
+	#header .logo img {
+		margin-top: 30px;
+	}
+
+
+/*position absolute를 사용하면 width를 명확하게 정해줘야함*/
+	#header .buttons {
+		position: absolute;
+
+		width: 50%;
+
+		left: 50%;
+		top: 0;
+	}
+
+	#header .buttons ul li {
+		height: 80px;
+	}
+}
+/*header는 3차원이기 때문에 header와 main_content가 겹친다.
+겹쳐진 영역만큼 공백을 만들어 준다.*/
+@media (min-width: 47em) {
+	.main_content {
+		padding-top: 80px;
+	}
+}
+
+
+@media (min-width: 60em) {
+	.main_content {
+		overflow: hidden;
+		/*부모값에 hidden을 주면 자식의 높이값을 받을 수 있다.*/
+	}
+	.main_content .product_group_link {
+		float: left;	
+
+		width: 50%;
+		height: 28.125%;
+	}
+}
+
+@media (min-width: 60em) {
+	#footer .left_nav {
+		float: left;
+
+		width: 50%;
+		background-color: greenyellow;
+		text-align: left;
+
+		padding-top: 32px;
+		padding-left: 40px;
+	}
+}
+
+
+	#footer .right_methods {
+		float: right;
+
+		width: 50%;
+		background-color: coral;
+
+		margin: 0;
+		padding-top: 32px;
+		padding-right: 40px;
+
+		text-align: right;
+	}
+
+	#footer ul, #footer li, #footer h3 {
+		display: inline-block;
+
+		vertical-align: middle;
+	}
+
+	#footer .left_nav a {
+		font-size: 14px;
+		padding: 0 5px;
+
+	}
+
+	#footer .right_methods li {
+		padding: 0 4px;
+	}
+
+
+	#footer h3 {
+		padding-right: 10px;
+	}
+/*padding-top 66px로 인해 footer값의 높이가 66px가됨*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
